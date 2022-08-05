@@ -9,7 +9,7 @@ import logo from 'assets/shared/logo.svg';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/space-tourism">
       <Helmet>
         <title>Space Tourism</title>
         <meta name="description" 

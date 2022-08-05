@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { Link } from 'react-router-dom';
 import { device } from 'helpers/device';
 
 export default function Home() {
@@ -17,9 +18,9 @@ export default function Home() {
 
             <Section id="explore">
                 <H4>
-                    <a href="/destinations">
+                    <Link to="/destinations">
                         <span>Explore</span>              
-                    </a>
+                    </Link>
                 </H4>
             </Section>
         </Main>

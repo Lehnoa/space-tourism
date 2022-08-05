@@ -7,8 +7,8 @@ export default function ScrollMenu({pageType, menuItems, handle}) {
 
     function MenuItems () {
         return menuItems.map((item, index) =>
-         (<li key={index} className={(index === selectedItem ? "active" : "")}>
-            <a href='/' className='h4' onClick={(e) => {handle(pageType, item); setSelectedItem(index); e.preventDefault();}}>{index + 1}
+         (<li key={index} className={(index === selectedItem ? "active" : "")} onClick={(e) => {handle(pageType, item); setSelectedItem(index); e.preventDefault();}}>
+            <a href='/' className='h4'>{index + 1}
             </a>
         </li>));
     }
