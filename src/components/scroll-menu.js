@@ -37,7 +37,7 @@ const Nav = styled.nav`
             color: var(--main-white);
             padding-block-start: 20%;
             &:hover {
-                    border: 1px solid var(--main-white);
+                border: 1px solid var(--main-white);
             }
             & a {
                 color: var(--main-white);

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { bubble as Menu } from 'react-burger-menu';
+// import { bubble as Menu } from 'react-burger-menu';
+import Menu from 'react-burger-menu/lib/menus/stack'
 import burger from 'assets/shared/icon-hamburger.svg';
 import close from 'assets/shared/icon-close.svg';
 import { Link } from 'react-router-dom';
@@ -23,7 +24,7 @@ export default function BurgerMenu({MenuItems}) {
             styles={ styles }
         >
             { MenuItems.map((item, index) => 
-                <Link to={ item.to } onClick={ () => handleClick() } key={ index }><strong>{ item.prefix }</strong>  { item.title }</Link>
+                <Link to={ item.to } onClick={ () => handleClick() } key={ index } className="h5"><strong>{ item.prefix }</strong>  { item.title }</Link>
             )}
         </Menu>
     );
