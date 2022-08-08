@@ -23,6 +23,7 @@ const StyledLink = styled(Link)`
         left: 3rem;
         & img {
             width: 48px;
+            height:48px;
         }
     }
     @media ${device.desktop} {
