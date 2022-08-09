@@ -17,11 +17,9 @@ export default function Home() {
             </Article> 
 
             <Section id="explore">
-                <H4>
-                    <Link to="/destinations">
-                        <span>Explore</span>              
-                    </Link>
-                </H4>
+                <Link to="/destinations">
+                    <Explore>Explore</Explore>              
+                </Link>
             </Section>
         </Main>
     );
@@ -119,7 +117,7 @@ const Section = styled.section`
         }
     }
 `;
-const H4 = styled.h4`
+const Explore = styled.span`
     font-family: 'Bellefair', serif;
     font-size: 1.25rem;
     letter-spacing: 1.25px;

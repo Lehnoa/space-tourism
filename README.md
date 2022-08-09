@@ -41,7 +41,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
 - [SPA Github Pages](https://github.com/rafgraph/spa-github-pages) - A lightweight solution for deploying single page apps with [GitHub Pages](https://pages.github.com/).
 

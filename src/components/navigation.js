@@ -32,7 +32,7 @@ export default function Navigation () {
     const isTabletOrDesktop = useMediaQuery({ query: `${device.tablet}` });
 
     return (
-        <Nav role='navigation' aria-labelledby='main-menu'>
+        <Nav aria-labelledby='main-menu'>
             <h2 id='main-menu' className='hidden'>Main Menu</h2>
             <hr className="line" aria-hidden='true' />
             { /* display burger menu for mobile */ }

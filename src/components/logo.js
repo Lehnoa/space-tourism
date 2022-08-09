@@ -5,9 +5,11 @@ import { device } from 'helpers/device';
 
 export default function Logo () {
     return(
-        <StyledLink to='/'>
-            <img src={ logo } alt='logo' />
-        </StyledLink>
+        <header role="banner">
+            <StyledLink to='/'>
+                <img src={ logo } alt='space travel logo' />
+            </StyledLink>
+        </header>
     );
 }
 
