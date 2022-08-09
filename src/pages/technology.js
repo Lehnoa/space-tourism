@@ -9,9 +9,10 @@ import JsonData from 'data.json';
 
 export default function Technology(){
     const [tech, handle] = useJsonData('technology', 'Launch vehicle');
+    const isMobileOrTablet = useMediaQuery({ query:  `(max-width: calc(${ size.desktop } - 1px))` });
     const isTabletOrDesktop = useMediaQuery({ query: `${ device.tablet }` });
     const techNames = JsonData['technology'].map(t => { return t.name });
-
+//TODO: work on correcting the css for the image based on portrait and lanscape dimentions
     return(
         <Main>
             <Helmet>
@@ -24,10 +25,8 @@ export default function Technology(){
             </header>
             <Div>
                 <ScrollMenu pageType='technology' menuItems={techNames} handle={handle} />
-                <Img
-                    src={require('../' + tech.images.portrait)}
-                    alt={tech.name}
-                />
+                { isMobileOrTablet && <Img src={require('../' + tech.images.landscape)} alt={tech.name} /> }
+                { !isMobileOrTablet && <Img src={require('../' + tech.images.portrait)} alt={tech.name} /> }
                 <Section>
                     <h3>
                         <small className={isTabletOrDesktop ? 'nav-text' : 'subheading1'}>THE TERMINOLOGY...</small>
@@ -46,6 +45,9 @@ const Main = styled(Page)`
         & header {
             padding-inline: 2.375rem;
         }
+    }
+    @media ${device.desktop} {
+        padding-inline-end: unset;
     }
 `;
 const Div = styled.div`
@@ -72,7 +74,7 @@ const Img = styled.img`
     width: 100vw;
     height: 170px;
     object-fit: cover;
-    object-position: 0 58%;
+    /* object-position: 0 58%; */
     @media ${device.tablet} {
         height: 310px;
     }
@@ -80,6 +82,7 @@ const Img = styled.img`
         width: 515px; //calc(100vw * 0.3578);
         height: 527px; //calc(100vw * 0.3659);
         justify-self: end;
+        object-fit: unset;
     }
 `;
 const Section = styled.section`
