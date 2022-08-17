@@ -104,7 +104,7 @@ const Section = styled.section`
                 width: 17.125rem;
                 height: 17.125rem;
                 box-shadow: inset 0px 17.125rem var(--main-dark);
-                -moz-box-shadow: inset 0px 16px var(--main-dark), inset 0px 16px 1px 1px var(--main-dark);
+                -moz-box-shadow: inset 0px 17.125rem var(--main-dark), inset 0px 17.125rem 1px 1px var(--main-dark);
                 transform: rotate(90deg);
                 border-radius: 50%;
                 opacity:0;
