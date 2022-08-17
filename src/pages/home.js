@@ -18,7 +18,7 @@ export default function Home() {
 
             <Section id="explore">
                 <Link to="/destinations">
-                    <Explore>Explore</Explore>              
+                    Explore
                 </Link>
             </Section>
         </Main>
@@ -68,28 +68,25 @@ const Article = styled.article`
 `;
 const Section = styled.section`
     grid-row-start: 2;
-    & a {
-        & span {
-            width: 9.375rem;
-            height: 9.375rem;
-            background-color: white;
-            border-radius: 50%;
-            display: inline-block;
-            text-align: center;
-            color: var(--main-dark);
-            text-transform: uppercase;
-            text-decoration: none;
-            padding-block: 4.2rem;
-        }
+    & a{
+        display: grid;
+        place-items: center;
+        width: 9.375rem;
+        height: 9.375rem;
+        color: var(--main-dark);
+        font-family: 'Bellefair', serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 50%;
+        background-color: var(--main-white);
     }
     @media ${device.tablet} {
         grid-row-start: 3;
         & a {
-            & span {
-                width: 15.125rem;
-                height: 15.125rem;
-                padding-block: 6.68rem;
-            }
+            width: 15.125rem;
+            height: 15.125rem;
+            font-size: 2rem;
+            letter-spacing: 2px;
         }
     }
     @media ${device.desktop} {
@@ -97,34 +94,40 @@ const Section = styled.section`
         grid-row-start: 2;
         align-self: end;
         & a {
-            width:28.125rem;
-            height:28.125rem;
-            border-radius: 50%;
-            display: inline-block;
-            padding-block-start: 5.5rem;
-            background-color: transparent;
             transition: background-color 0.5s cubic-bezier(0.28, 0.14, 0, 0.4);
-            &:hover {
-                @media ${device.desktop} {
-                    background-color: rgba(255, 255, 255, 0.1036);
-                }
-            }
-            & span {
+            position: relative;
+            width: 17.125rem;
+            height: 17.125rem;
+            &::after {
+                content: '';
+                position: absolute;
                 width: 17.125rem;
                 height: 17.125rem;
-                padding-block: 7.68rem;
+                box-shadow: inset 0px 17.125rem var(--main-dark);
+                -moz-box-shadow: inset 0px 16px var(--main-dark), inset 0px 16px 1px 1px var(--main-dark);
+                transform: rotate(90deg);
+                border-radius: 50%;
+                opacity:0;
+            }
+            &:hover::after {
+                animation-duration: .80s;
+                animation-name: eclipse-expansion;
+                animation-fill-mode: forwards;
+            }
+            @keyframes eclipse-expansion{
+                60% {
+                    box-shadow: inset 0px 0px #000; 
+                    opacity: 0.136;
+                    border: 0px solid rgba(255, 255, 255, 0.136);
+                }
+                100% {
+                    box-shadow: inset 0px 0px #000; 
+                    border: 80px solid rgba(255, 255, 255, 0.136);
+                    opacity: 1;
+                }
             }
         }
     }
 `;
-const Explore = styled.span`
-    font-family: 'Bellefair', serif;
-    font-size: 1.25rem;
-    letter-spacing: 1.25px;
-    @media ${ device.tablet } {
-        font-family: 'Bellefair', serif;
-        font-size: 2rem;
-        letter-spacing: 2px;
-    }
-`;
+
 

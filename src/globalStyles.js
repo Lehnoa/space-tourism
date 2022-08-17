@@ -34,12 +34,12 @@ h1 {
 h2 {
     font-family: 'Bellefair', serif;
     letter-spacing: 0px;
-    font-size: 56px;
+    font-size: 3.5rem;
     text-transform: uppercase;
 }
 h3 {
     font-family: 'Bellefair', serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-transform: uppercase; 
 }
 h4, .h4 {
@@ -91,10 +91,10 @@ hr {
         line-height: normal;
     }
     h2 {
-        font-size: 80px; 
+        font-size: 5rem; 
     }
     h3 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
     h4, .h4 {
         font-size: 1.5rem;
@@ -110,10 +110,10 @@ hr {
 }
 @media ${ device.desktop } {
     h2 {
-        font-size: 100px; 
+        font-size: 6.25rem; 
     }
     h3 {
-        font-size: 56px;
+        font-size: 3.5rem;
     }
     h4, .h4 {
         font-size: 2rem;
@@ -124,7 +124,7 @@ hr {
     }    
     p {
         line-height: 32px;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }
 `;

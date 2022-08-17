@@ -12,7 +12,7 @@ export default function Technology(){
     const isMobileOrTablet = useMediaQuery({ query:  `(max-width: calc(${ size.desktop } - 1px))` });
     const isTabletOrDesktop = useMediaQuery({ query: `${ device.tablet }` });
     const techNames = JsonData['technology'].map(t => { return t.name });
-//TODO: work on correcting the css for the image based on portrait and lanscape dimentions
+
     return(
         <Main>
             <Helmet>

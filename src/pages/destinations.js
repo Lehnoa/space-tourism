@@ -134,7 +134,7 @@ const Footer = styled.footer`
     }
     & dd {
       font-family: 'Bellefair', serif;
-      font-size: 28px; 
+      font-size: 1.75rem; 
       color: var(--main-white);
       text-transform: uppercase;
       margin: 0;
